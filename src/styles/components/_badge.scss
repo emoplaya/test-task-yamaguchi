@@ -1,0 +1,14 @@
+@use "../utils" as *;
+
+.badge {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    aspect-ratio: 1;
+    place-items: center;
+    line-height: 1.2;
+    color: var(--color-white);
+    text-align: center;
+    background-color: var(--color-text-dark);
+    clip-path: star-polygon(16, 86%);
+}

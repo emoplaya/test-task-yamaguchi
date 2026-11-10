@@ -1,0 +1,125 @@
+@use "../utils" as *;
+
+.slide--lightweight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: fluid-mobile(27);
+
+    @include on-desktop {
+        display: block;
+        padding: 0;
+        background:
+            radial-gradient(
+                ellipse 35% 55% at 8% 40%,
+                rgb(182 168 156 / 0.9) 0%,
+                rgb(182 168 156 / 0) 100%
+            ),
+            var(--color-surface);
+    }
+
+    .feature {
+        align-self: stretch;
+    }
+}
+
+.lightweight__title {
+    margin-top: fluid-mobile(26);
+    font-size: fluid-mobile(37);
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include on-desktop {
+        position: absolute;
+        z-index: 2;
+        top: fluid-desktop(272);
+        left: fluid-desktop(767);
+        width: fluid-desktop(400);
+        margin: 0;
+        font-size: fluid-desktop(60);
+        line-height: fluid-desktop(61);
+        text-align: center;
+    }
+}
+
+.lightweight__title-break {
+    display: none;
+
+    @include on-desktop {
+        display: inline;
+    }
+}
+
+.lightweight__weight {
+    height: fluid-mobile(39);
+    margin-top: fluid-mobile(21);
+    padding: 0 fluid-mobile(22);
+    font-size: fluid-mobile(18);
+
+    @include on-desktop {
+        position: absolute;
+        z-index: 2;
+        top: fluid-desktop(567);
+        left: fluid-desktop(906);
+        height: fluid-desktop(54);
+        margin: 0;
+        padding: 0 fluid-desktop(30);
+        font-size: fluid-desktop(28);
+    }
+}
+
+.lightweight__badge {
+    top: fluid-mobile(204);
+    right: fluid-mobile(21);
+    width: fluid-mobile(97);
+    font-size: fluid-mobile(11);
+    rotate: -12deg;
+
+    @include on-desktop {
+        top: fluid-desktop(35);
+        right: auto;
+        left: fluid-desktop(44);
+        width: fluid-desktop(177);
+        font-size: fluid-desktop(20);
+    }
+}
+
+.lightweight__image {
+    width: fluid-mobile(440);
+    max-width: none;
+    margin-top: fluid-mobile(-8);
+    mask-image: linear-gradient(#000 70%, transparent 98%);
+
+    @include on-desktop {
+        position: absolute;
+        top: 0;
+        left: fluid-desktop(128);
+        width: fluid-desktop(669);
+        margin: 0;
+        mask-image: none;
+    }
+}
+
+.lightweight__description {
+    position: relative;
+    max-width: fluid-mobile(290);
+    margin-top: fluid-mobile(14);
+    font-family: var(--font-family-accent);
+    font-size: fluid-mobile(16.5);
+    font-weight: 500;
+    line-height: fluid-mobile(25);
+    text-align: center;
+
+    @include on-desktop {
+        position: absolute;
+        z-index: 2;
+        top: fluid-desktop(428);
+        left: fluid-desktop(767);
+        width: fluid-desktop(400);
+        max-width: none;
+        margin: 0;
+        padding: 0 fluid-desktop(50);
+        font-size: fluid-desktop(17);
+        line-height: fluid-desktop(25);
+    }
+}

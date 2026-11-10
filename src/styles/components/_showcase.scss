@@ -1,0 +1,19 @@
+@use "../utils" as *;
+
+.showcase {
+    position: relative;
+    overflow-x: clip;
+
+    @include on-desktop {
+        height: 100vh;
+        height: 100svh;
+        overflow: hidden;
+    }
+}
+
+.showcase__stage {
+    @include on-desktop {
+        position: absolute;
+        inset: 0;
+    }
+}

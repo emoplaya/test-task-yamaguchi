@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "sass:list";
+@use "settings" as *;
+
+@function fluid-mobile($size) {
+    @return math.div($size, $mobile-mockup-width) * 100cqw;
+}
+
+@function fluid-desktop($size) {
+    @return calc(#{$size} * var(--desktop-scale));
+}
+
+@function round-percent($value) {
+    @return math.div(math.round($value * 100), 100);
+}
+
+@function star-polygon($points-count: 16, $inner-radius: 86%) {
+    $vertices: ();
+    $vertices-count: $points-count * 2;
+
+    @for $vertex-index from 0 to $vertices-count {
+        $angle: math.div(math.$pi * $vertex-index, $points-count) - math.div(math.$pi, 2);
+        $radius: 50%;
+
+        @if $vertex-index % 2 == 1 {
+            $radius: math.div($inner-radius, 2);
+        }
+
+        $x: round-percent(50% + $radius * math.cos($angle));
+        $y: round-percent(50% + $radius * math.sin($angle));
+        $vertices: list.append($vertices, $x $y, $separator: comma);
+    }
+
+    @return polygon($vertices);
+}

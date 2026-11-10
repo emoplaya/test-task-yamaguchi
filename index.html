@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Фен-стайлер Yamaguchi 2 в 1 - лёгкий корпус и бесщеточный японский мотор">
+    <meta name="theme-color" content="#7f7875">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <title>Yamaguchi - фен-стайлер 2 в 1</title>
+  </head>
+
+  <body>
+    <main class="page">
+      <h1 class="visually-hidden">Фен-стайлер Yamaguchi 2 в 1</h1>
+
+      <section class="showcase" data-showcase>
+        <nav class="wheel" aria-label="Навигация по слайдам" data-wheel>
+          <div class="wheel__ring"></div>
+          <ul class="wheel__list" data-wheel-list>
+            <li class="wheel__item is-active" style="--wheel-cell-position: 0" data-wheel-item>
+              <button class="wheel__button" type="button" data-slide-target="0">
+                <span class="wheel__icon">
+                  <svg aria-hidden="true"><use href="./sprite.svg#icon-dryer"></use></svg>
+                </span>
+                <span class="wheel__label">Фен-стайлер<br>2 в 1</span>
+              </button>
+            </li>
+            <li class="wheel__item" style="--wheel-cell-position: -1" data-wheel-item>
+              <button class="wheel__button" type="button" data-slide-target="1">
+                <span class="wheel__icon">
+                  <svg aria-hidden="true"><use href="./sprite.svg#icon-feather"></use></svg>
+                </span>
+                <span class="wheel__label">Суперлёгкий</span>
+              </button>
+            </li>
+            <li class="wheel__item" style="--wheel-cell-position: -2" data-wheel-item>
+              <button class="wheel__button" type="button" data-slide-target="2">
+                <span class="wheel__icon">
+                  <svg aria-hidden="true"><use href="./sprite.svg#icon-motor"></use></svg>
+                </span>
+                <span class="wheel__label">Инновационный<br>японский мотор</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="showcase__stage">
+          <article class="slide slide--hero is-active" data-showcase-slide>
+            <div class="hero__intro">
+              <h2 class="hero__title">ФЕН и СТАЙЛЕР<br>в уникальном дизайне</h2>
+              <p class="pill hero__tag">2 в 1</p>
+              <img
+                class="hero__image"
+                src="/src/assets/img/hero-devices.png"
+                width="674"
+                height="546"
+                alt="Фен и стайлер Yamaguchi рядом с длинными волосами"
+              >
+            </div>
+            <div class="hero__cards">
+              <figure class="hero__card">
+                <figcaption class="pill pill--dark hero__card-label">Фен</figcaption>
+                <img
+                  class="hero__photo"
+                  src="/src/assets/img/photo-dryer.jpg"
+                  width="242"
+                  height="430"
+                  alt="Девушка сушит волосы феном"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </figure>
+              <figure class="hero__card hero__card--styler">
+                <figcaption class="pill hero__card-label">Стайлер</figcaption>
+                <img
+                  class="hero__photo"
+                  src="/src/assets/img/photo-styler.jpg"
+                  width="242"
+                  height="430"
+                  alt="Девушка завивает волосы стайлером"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </figure>
+            </div>
+          </article>
+
+          <article class="slide slide--lightweight" data-showcase-slide>
+            <div class="feature">
+              <span class="feature__icon">
+                <svg aria-hidden="true"><use href="./sprite.svg#icon-feather"></use></svg>
+              </span>
+              <p class="feature__text">Лёгкость<br>и комфорт<br>в руке</p>
+            </div>
+            <h2 class="lightweight__title">
+              Супер<span class="lightweight__title-break">-<br></span>лёгкий
+            </h2>
+            <p class="pill lightweight__weight">500 г</p>
+            <p class="badge lightweight__badge">Не тяжелее<br>чашки кофе</p>
+            <img
+              class="lightweight__image"
+              src="/src/assets/img/lightweight-model.png"
+              width="669"
+              height="800"
+              alt="Девушка держит фен-стайлер и чашку кофе"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="lightweight__description">
+              Уменьшает усталость рук<br>
+              при сушке волос, делая процедуру удобной и приятной даже после напряжённого рабочего
+              дня.
+            </p>
+          </article>
+
+          <article class="slide slide--motor" data-showcase-slide>
+            <div class="feature">
+              <span class="feature__icon">
+                <svg aria-hidden="true"><use href="./sprite.svg#icon-motor"></use></svg>
+              </span>
+              <p class="feature__text">Инновационный<br>японский мотор</p>
+            </div>
+            <h2 class="motor__title">
+              <span class="motor__title-line motor__title-line--first">Для ценителей</span>
+              <span class="motor__title-line motor__title-line--second">комфорта</span>
+              <span class="motor__title-line motor__title-line--third">и качества</span>
+              <span class="motor__title-line motor__title-line--fourth">в уходе за волосами</span>
+            </h2>
+            <div class="motor__media">
+              <div class="motor__image-wrapper">
+                <img
+                  class="motor__image"
+                  src="/src/assets/img/motor-cutaway.png"
+                  width="1240"
+                  height="800"
+                  alt="Бесщеточный мотор BLDC в разрезе"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <p class="motor__subtitle">Бесщеточный <br>мотор BLDC</p>
+              <p class="badge motor__badge">Салонная<br>мощность</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

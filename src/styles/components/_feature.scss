@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: fluid-mobile(17);
+    height: fluid-mobile(100);
+    padding-left: fluid-mobile(14);
+    color: var(--color-accent-dark);
+    background-color: var(--color-accent-light);
+    border-radius: fluid-mobile(50);
+
+    @include on-desktop {
+        display: none;
+    }
+}
+
+.feature__icon {
+    display: grid;
+    flex: none;
+    width: fluid-mobile(75);
+    height: fluid-mobile(75);
+    place-items: center;
+    border: fluid-mobile(1.5) solid currentColor;
+    border-radius: 50%;
+
+    svg {
+        width: 64%;
+        aspect-ratio: 1;
+    }
+}
+
+.feature__text {
+    font-size: fluid-mobile(20);
+    line-height: 1.1;
+    text-transform: uppercase;
+}

@@ -1,0 +1,161 @@
+@use "../utils" as *;
+
+.slide--hero {
+    @include on-desktop {
+        background:
+            radial-gradient(ellipse 38% 42% at 50% 12%, #dcd6d3 0%, rgb(220 214 211 / 0) 100%),
+            radial-gradient(
+                ellipse 30% 45% at 70% 50%,
+                rgb(196 166 154 / 0.85) 0%,
+                rgb(196 166 154 / 0) 100%
+            ),
+            radial-gradient(
+                ellipse 28% 45% at 27% 25%,
+                rgb(196 184 172 / 0.8) 0%,
+                rgb(196 184 172 / 0) 100%
+            ),
+            var(--color-surface);
+    }
+}
+
+.hero__intro {
+    position: relative;
+    height: fluid-mobile(400);
+    padding-top: fluid-mobile(18);
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(ellipse 70% 45% at 50% 30%, #d8d3cf 0%, rgb(216 211 207 / 0) 100%),
+        radial-gradient(
+            ellipse 45% 40% at 95% 45%,
+            rgb(222 203 179 / 0.8) 0%,
+            rgb(222 203 179 / 0) 100%
+        ),
+        linear-gradient(#c4bcb7, #a59d98);
+
+    @include on-desktop {
+        position: static;
+        height: auto;
+        padding-top: fluid-desktop(48);
+        overflow: visible;
+        background: none;
+    }
+}
+
+.hero__title {
+    position: relative;
+    z-index: 2;
+    font-size: fluid-mobile(24);
+    line-height: fluid-mobile(30);
+    color: var(--color-text-dark);
+
+    @include on-desktop {
+        font-size: fluid-desktop(50);
+        line-height: fluid-desktop(57);
+    }
+}
+
+.hero__tag {
+    position: relative;
+    z-index: 2;
+    height: fluid-mobile(45);
+    margin: fluid-mobile(10) auto 0;
+    padding: 0 fluid-mobile(21);
+    font-size: fluid-mobile(32);
+
+    @include on-desktop {
+        height: fluid-desktop(72);
+        margin-top: fluid-desktop(18);
+        padding: 0 fluid-desktop(33);
+        font-size: fluid-desktop(52);
+    }
+}
+
+.hero__image {
+    position: absolute;
+    z-index: 1;
+    top: fluid-mobile(149);
+    left: fluid-mobile(-80);
+    width: fluid-mobile(418);
+    max-width: none;
+
+    @include on-desktop {
+        top: fluid-desktop(254);
+        left: fluid-desktop(284);
+        width: fluid-desktop(674);
+    }
+}
+
+.hero__cards {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: fluid-mobile(10);
+    margin-top: fluid-mobile(-17);
+
+    @include on-desktop {
+        position: absolute;
+        top: fluid-desktop(244);
+        right: fluid-desktop(54);
+        left: fluid-desktop(52);
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
+
+.hero__card {
+    position: relative;
+    height: fluid-mobile(307);
+    overflow: hidden;
+    border-radius: fluid-mobile(23);
+
+    @include on-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: fluid-desktop(22);
+        width: fluid-desktop(242);
+        height: auto;
+        overflow: visible;
+        border-radius: 0;
+    }
+}
+
+.hero__card--styler {
+    @include on-desktop {
+        align-items: flex-end;
+    }
+}
+
+.hero__card-label {
+    position: absolute;
+    z-index: 1;
+    top: fluid-mobile(20);
+    left: 50%;
+    height: fluid-mobile(34);
+    padding: 0 fluid-mobile(19);
+    font-size: fluid-mobile(18);
+    translate: -50% 0;
+
+    @include on-desktop {
+        position: static;
+        height: fluid-desktop(54);
+        padding: 0 fluid-desktop(29);
+        font-size: fluid-desktop(28);
+        translate: none;
+    }
+}
+
+.hero__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include on-desktop {
+        height: fluid-desktop(430);
+        border-radius: fluid-desktop(24);
+        box-shadow: 0 fluid-desktop(10) fluid-desktop(30) rgb(0 0 0 / 0.25);
+    }
+}

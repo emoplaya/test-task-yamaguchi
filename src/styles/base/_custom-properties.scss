@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+:root {
+    --color-white: #ffffff;
+    --color-background: #7f7875;
+    --color-background-mobile: #746d68;
+    --color-surface: #a29c9a;
+    --color-text-dark: #4b4b4b;
+    --color-text-secondary: #555555;
+    --color-text-muted: #6b6b6b;
+    --color-accent-light: #dbdbdb;
+    --color-accent-dark: #625b56;
+
+    --color-wheel-cell: #746d68;
+    --color-wheel-icon: #adacac;
+    --color-wheel-icon-active: #726965;
+
+    --font-family-base: "Euclid Circular A", sans-serif;
+    --font-family-accent: "Montserrat", sans-serif;
+
+    --shadow-pill: 0 4px 14px rgb(0 0 0 / 0.14);
+
+    --desktop-scale: min(
+        calc(100vw / #{$desktop-mockup-width}),
+        calc(100vh / #{$desktop-mockup-height})
+    );
+}

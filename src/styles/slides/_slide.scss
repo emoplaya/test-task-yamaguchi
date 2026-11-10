@@ -1,0 +1,19 @@
+@use "../utils" as *;
+
+.slide {
+    position: relative;
+
+    @include on-desktop {
+        position: absolute;
+        inset: 0;
+        width: fluid-desktop(1240);
+        height: fluid-desktop(800);
+        margin: auto;
+        overflow: hidden;
+        border-radius: fluid-desktop(60);
+
+        &:not(.is-active) {
+            visibility: hidden;
+        }
+    }
+}

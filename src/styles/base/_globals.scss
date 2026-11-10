@@ -1,0 +1,22 @@
+@use "../utils" as *;
+
+body {
+    min-width: 320px;
+    overflow-x: clip;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-white);
+    background-color: var(--color-background-mobile);
+    -webkit-font-smoothing: antialiased;
+
+    @include on-desktop {
+        background-color: var(--color-background);
+    }
+}
+
+.page {
+    @include on-mobile {
+        container-type: inline-size;
+    }
+}
